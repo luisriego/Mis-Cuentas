@@ -1,0 +1,78 @@
+{% extends('::layout.html.twig') %}
+
+{% block body %}
+    <header class="main-header">
+        <div class="container">
+            <h1 class="page-title">Contato</h1>
+
+            <ol class="breadcrumb pull-right">
+                <li class="active">Contato</li>
+            </ol>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title no-margin-top">Enviar menssagem</h2>
+            </div>
+            <div class="col-md-8">
+                <section>
+                    <p>Para entrar em contato, por favor, preencha este formulário com todos os dados solicitados. Entrarei em contato o antes possível.</p>
+
+                    {{ form_start(form) }}
+                        {{ form_errors(form) }}
+                        <div class="form-group">
+                            {{ form_label(form.nombre) }}
+                            {{ form_errors(form.nombre) }}
+                            {{ form_widget(form.nombre, {'attr': {
+                                'class': 'form-control'}})
+                            }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.email) }}
+                            {{ form_errors(form.email) }}
+                            {{ form_widget(form.email, {'attr': {
+                                'class': 'form-control'}})
+                            }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.mensaje) }}
+                            {{ form_errors(form.mensaje) }}
+                            {{ form_widget(form.mensaje, {'attr': {
+                                'class': 'form-control'}})
+                            }}
+                        </div>
+                        <div>
+                            {{ form_widget(form.enviar, {'attr': {
+                                'class': 'btn btn-ar btn-primary'}}) }}
+                        </div>
+                        <div class="clearfix"></div>
+                    {{ form_end(form) }}
+                </section>
+            </div>
+
+            <div class="col-md-4">
+                <section>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><i class="fa fa-envelope-o"></i> Informação Adicional</div>
+                        <div class="panel-body">
+                            <h4 class="section-title no-margin-top">Nossos Contatos</h4>
+                            <address>
+                                <strong>Clínica do Micro</strong><br>
+                                Av. Getúlio Vargas, 54 Loja 04 Funcionários<br>
+                                Belo Horizonte, MG 30112-020<br>
+                                <abbr title="Telefone">Tel:</abbr> +55 31 3313-9559 <br>
+                                <abbr title="Celular">Tel:</abbr> +55 31 99236-6226 <br>
+                                Mail: <a href="#">contato@luisriego.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <hr class="dotted">
+
+    </div> <!-- container -->
+{% endblock %}

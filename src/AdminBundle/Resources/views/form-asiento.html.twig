@@ -1,0 +1,206 @@
+{% extends('::layout.html.twig') %}
+
+{% block body %}
+    <header class="main-header">
+        <div class="container">
+            <h1 class="page-title">Formulário de Assentos Contábeis</h1>
+
+            <ol class="breadcrumb pull-right">
+                <li><a href="{#{{ path('admin') }}#}">Administração</a></li>
+                <li class="active">Formulário de assentos</li>
+            </ol>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title no-margin-top">Formulário de ingresso de assentos contáveis</h2>
+            </div>
+            <div class="col-md-8">
+                <section>
+                    <div class="row">
+                        {{ form_start(formulario, { 'attr': { 'class' : '' } }) }}
+                        {{ form_errors(formulario) }}
+                        <fieldset>
+                            <div class="form-group col-md-5">
+                                {{ form_label(formulario.fecha, 'Data') }}
+                                {#<label for="fecha" class="">Data</label>#}
+                                {{ form_widget(formulario.fecha, { 'attr': {
+                                    'class' : 'form-control'
+                                } }) }}
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                {{ form_label(formulario.nombre, 'Nome') }}
+                                {{ form_widget(formulario.nombre, { 'attr': {
+                                    'class' : 'form-control',
+                                    'placeholder' : 'Nome'
+                                } }) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(formulario.tipo, 'Tipo') }}
+                                {{ form_widget(formulario.tipo, { 'attr': {
+                                    'class' : 'form-control'
+                                } }) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(formulario.importe, 'Importe') }}
+                                {{ form_widget(formulario.importe, { 'attr': {
+                                    'class' : 'form-control'
+                                } }) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(formulario.fPago, 'Forma de Pago') }}
+                                {{ form_widget(formulario.fPago, { 'attr': {
+                                    'class' : 'form-control'
+                                } }) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(formulario.parcelas, 'Parcelas') }}
+                                {{ form_widget(formulario.parcelas, { 'attr': {
+                                    'class' : 'form-control',
+                                    'value' : 1
+                                } }) }}
+                            </div>
+                            <div class="form-group col-md-12">
+                                {{ form_label(formulario.anotacion, 'Anotações') }}
+                                {{ form_widget(formulario.anotacion, { 'attr': {
+                                    'class' : 'form-control'
+                                } }) }}
+                            </div>
+                            <div class="checkbox col-md-12">
+                                <label>
+                                    {{ form_widget(formulario.vacaciones, { 'attr': {
+                                        'class' : 'form-control'
+                                    } }) }} Vacaciones
+                                </label>
+                            </div>
+                            <div class="form-group col-md-3 col-md-offset-9">
+                                {{ form_widget(formulario.registrar, { 'attr': {
+                                    'class' : 'btn btn-large btn-block btn-primary',
+                                    'data-loading-text' : 'Loading...'
+                                } }) }}
+                            </div>
+
+                        </fieldset>
+                        {#</div>#}
+                        {{ form_end(formulario) }}
+                    </div>
+
+
+                </section>
+            </div>
+
+            <div class="col-md-4">
+                <section>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><i class="fa fa-dollar"></i> Informação Adicional</div>
+                        <div class="panel-body">
+                            <h4 class="section-title no-margin-top">Últimos assentos</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <td><strong>Nome</strong></td>
+                                    <td><strong>Importe</strong></td>
+                                    <td><strong>Data</strong></td>
+                                </tr>
+                                </thead>
+                                {% for a in asiento %}
+                                    <tr>
+                                        <td>{{ a.nombre | truncate(25, false)}}</td>
+                                        <td>{{ a.importe | number_format(2, ',', '.') }}</td>
+                                        <td>{{ a.fecha | date('d/m/Y') }}</td>
+                                    </tr>
+                                {% endfor %}
+                                {% set sumaActual = 0 %}
+                                {% set gastoActual = 0 %}
+                                {% set ganhoActual = 0 %}
+                                {% set suma1Anterior = 0 %}
+                                {% set gastoAnterior = 0 %}
+                                {% set ganhoAnterior = 0 %}
+                                {% set suma2Anterior = 0 %}
+                                {% set suma3Anterior = 0 %}
+                                {% set gFixos = 0 %}
+                                {% set alimentacion = 0 %}
+
+                                {% for a in suma %}
+                                    {% if a.fecha|date('m') == 'now'|date('m') %}
+                                        {% set sumaActual = sumaActual + a.importe %}
+                                        {% if a.operacion == 0 %}
+                                            {% set gastoActual = gastoActual + a.importe %}
+                                        {% else %}
+                                            {% set ganhoActual = ganhoActual + a.importe %}
+                                        {% endif %}
+                                    {% elseif a.fecha|date('m') == 'now'|date('m')-1 %}
+                                        {% set suma1Anterior = suma1Anterior + a.importe %}
+                                        {% if a.operacion == 0 %}
+                                            {% set gastoAnterior = gastoAnterior + a.importe %}
+                                        {% else %}
+                                            {% set ganhoAnterior = ganhoAnterior + a.importe %}
+                                        {% endif %}
+                                    {% elseif a.fecha|date('m') == 'now'|date('m')-2 %}
+                                        {% set suma2Anterior = suma2Anterior + a.importe %}
+                                    {% elseif a.fecha|date('m') == 'now'|date('m')-3 %}
+                                        {% set suma3Anterior = suma3Anterior + a.importe %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                <tr>
+                                    <td><strong>Total este mes:</strong></td>
+                                    <td><strong>{{ sumaActual | number_format(2, ',', '.') }}</strong></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <hr class="dotted">
+        <div class="col-md-9">
+            <section class="css-section">
+                <h2 class="section-title no-margin-top">Gastos discriminados</h2>
+                <div class="alert alert-info">Referentes ao mes passado</div>
+                <hr class="dotted">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="text-center">
+                            <div class="circle" id="circles-1"></div>
+                            <h4 class="text-center">HTML 5</h4>
+                            <p class="small-font">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="text-center">
+                            <div class="circle" id="circles-2"></div>
+                            <h4 class="text-center">CSS 3</h4>
+                            <p class="small-font">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="text-center">
+                            <div class="circle" id="circles-3"></div>
+                            <h4 class="text-center">Jquery</h4>
+                            <p class="small-font">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="text-center">
+                            <div class="circle" id="circles-4"></div>
+                            <h4 class="text-center">Bootstrap 3</h4>
+                            <p class="small-font">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="hidden">
+            <div class="well well-sm">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d937.7060092707519!2d-43.9242921!3d-19.9318186!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sus!4v1452256315307" width="100%" height="350"></iframe>
+            </div>
+        </section>
+    </div> <!-- container -->
+{% endblock %}

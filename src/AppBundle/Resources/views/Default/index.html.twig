@@ -1,0 +1,810 @@
+{% extends('::base.html.twig') %}
+
+{% block body %}
+    <div id="sb-site">
+        <div class="boxed">
+
+            <header id="header-full-top" class="hidden-xs header-full-dark">
+                <div class="container">
+                    <div class="header-full-title">
+                        <h1 class="animated fadeInRight"><a href="{{ path('homepage') }}">Clínica <span>do</span><span>Micro</span></a></h1>
+                        <p class="animated fadeInRight">Soluções em redes tel. 3320-1240</p>
+                    </div>
+                    <nav class="top-nav">
+
+                        <div class="dropdown animated fadeInDown animation-delay-11">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Login</a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-login-box animated flipCenter">
+                                <form role="form">
+                                    <h4>Formulário de Login</h4>
+
+                                    <div class="form-group">
+                                        <div class="input-group login-input">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="Usuario">
+                                        </div>
+                                        <br>
+                                        <div class="input-group login-input">
+                                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                            <input type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="checkbox pull-left">
+                                            <input type="checkbox" id="checkbox_remember1">
+                                            <label for="checkbox_remember1">
+                                                Lembrar de mim
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-ar btn-primary pull-right">Login</button>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> <!-- dropdown -->
+
+                        <div class="dropdown animated fadeInDown animation-delay-13">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-search-box animated fadeInUp">
+                                <form role="form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Buscar...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-ar btn-primary" type="button">Buscar!</button>
+                            </span>
+                                    </div><!-- /input-group -->
+                                </form>
+                            </div>
+                        </div> <!-- dropdown -->
+                    </nav>
+                </div> <!-- container -->
+            </header> <!-- header-full -->
+            <nav class="navbar navbar-default navbar-header-full navbar-dark yamm navbar-static-top" role="navigation" id="header">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a id="ar-brand" class="navbar-brand hidden-lg hidden-md hidden-sm navbar-dark" href="{{ path("homepage") }}">Clinica <span>do Micro</span></a>
+                    </div> <!-- navbar-header -->
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="pull-right">
+                        <a href="javascript:void(0);" class="sb-icon-navbar sb-toggle-right"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="{{ path('homepage') }}" class="" data-toggle="" data-hover="">Início</a>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Serviços</a>
+                                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                                    <li>
+                                        <div class="yamm-content">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-megamenu">
+                                                    <div class="megamenu-block">
+                                                        <h4 class="megamenu-block-title"><i class="fa fa-css3"></i> CSS</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-font"></i> Typography</a></li>
+                                                            <li><a href="#"><i class="fa fa-header"></i> Headers</a></li>
+                                                            <li><a href="#"><i class="fa fa-arrows-h"></i> Dividers</a></li>
+                                                            <li><a href="#"><i class="fa fa-quote-right"></i> Blockquotes</a></li>
+                                                            <li><a href="#"><i class="fa fa-check-square-o"></i> Forms</a></li>
+                                                            <li><a href="#"><i class="fa fa-table"></i> Tables</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-block">
+                                                        <h4 class="megamenu-block-title"><i class="fa fa-hand-o-up"></i> Buttons</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Basic Buttons</a></li>
+                                                            <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Buttons Library <span class="label label-info pull-right">Update</span></a></li>
+                                                            <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Social Buttons</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-megamenu">
+                                                    <div class="megamenu-block">
+                                                        <h4 class="megamenu-block-title"><i class="fa fa-hand-o-up"></i> Icons</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-font"></i> Artificial Reason Icons</a></li>
+                                                            <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Glyphicons Icons</a></li>
+                                                            <li><a href="#"><i class="fa fa-flag"></i> Font Awesome</a></li>
+                                                            <li><a href="#"><i class="fa fa-twitter"></i> Social Icons</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-block">
+                                                        <h4 class="megamenu-block-title"><i class="fa fa-star"></i> New in 1.4</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-user"></i> Profile Cards <span class="label label-success pull-right">New</span></a></li>
+                                                            <li><a href="#"><i class="fa fa-sort-numeric-asc"></i> Counters <span class="label label-success pull-right">New</span></a></li>
+                                                            <li><a href="#"><i class="fa fa-columns"></i> Navbar Tabs <span class="label label-success pull-right">New</span></a></li>
+                                                            <li><a href="#"><i class="fa fa-th"></i> Masonry Layer <span class="label label-success pull-right">New</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-megamenu">
+                                                    <div class="megamenu-block">
+                                                        <h4 class="megamenu-block-title"><i class="fa fa-list-alt"></i> Components</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Components Dropdowns</a></li>
+                                                            <li><a href="#"><i class="fa fa-columns"></i> Panels</a></li>
+                                                            <li><a href="#"><i class="fa fa-list-ul"></i> Lists</a></li>
+                                                            <li><a href="#"><i class="fa fa-sort-numeric-asc"></i> Paginations</a></li>
+                                                            <li><a href="#"><i class="fa fa-flag-o"></i> Labels and Badges</a></li>
+                                                            <li><a href="#"><i class="fa fa-info-circle"></i> Alerts and Wells</a></li>
+                                                            <li><a href="#"><i class="fa fa-picture-o"></i> Thumbnails</a></li>
+                                                            <li><a href="#"><i class="fa fa-square"></i> Modals</a></li>
+                                                            <li><a href="#"><i class="fa fa-bars"></i> Progress Bars</a></li>
+                                                            <li><a href="#"><i class="fa fa-bullhorn"></i> Tooltip &amp; Popover</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-megamenu">
+                                                    <div class="megamenu-block">
+                                                        <h4 class="megamenu-block-title"><i class="fa fa-flag"></i> Extra Elements</h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-tasks"></i> Collapses &amp; Tabs</a></li>
+                                                            <li><a href="#"><i class="fa fa-tasks"></i> Vertical Tabs <span class="label label-success pull-right">New</span></a></li>
+                                                            <li><a href="#"><i class="fa fa-toggle-on"></i> Switch Controls <span class="label label-success pull-right">New</span></a></li>
+                                                            <li><a href="#"><i class="fa fa-list-alt"></i> Contents Box</a></li>
+                                                            <li><a href="#"><i class="fa fa-play-circle"></i> Carousels</a></li>
+                                                            <li><a href="#"><i class="fa fa-tachometer"></i> Charts &amp; CountDowns</a></li>
+                                                            <li><a href="#"><i class="fa fa-th"></i> Masonry Layer <span class="label label-success pull-right">New</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Pages</a>
+                                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">About us &amp; Team</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">About us Option 1</a></li>
+                                            <li><a href="#">About us Option 2</a></li>
+                                            <li><a href="#">About us &amp; Team</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Our Team Option 1</a></li>
+                                            <li><a href="#">Our Team Option 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Form</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Contact Option 1</a></li>
+                                            <li><a href="#">Contact Option 2</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Login Integrated</a></li>
+                                            <li><a href="#">Login Full Page</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Login and Register</a></li>
+                                            <li><a href="#">Register Option 1</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Profiles</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">User Profile Option 1</a></li>
+                                            <li><a href="#">User Profile Option 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Error</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Error 404 Full Page</a></li>
+                                            <li><a href="#">Error 404 Integrated</a></li>
+                                            <li><a href="#">Error 500 Full Page</a></li>
+                                            <li><a href="#">Error 500 Integrated</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Bussiness &amp; Products</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Testimonials</a></li>
+                                            <li><a href="#">Our Clients</a></li>
+                                            <li><a href="#">Products</a></li>
+                                            <li><a href="#">Services</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Pricing</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Pricing Box</a></li>
+                                            <li><a href="#">Pricing Mega Table</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">FAQ &amp; Support</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Support Center</a></li>
+                                            <li><a href="#">FAQ Option 1</a></li>
+                                            <li><a href="#">FAQ Option 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Coming Soon</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Coming Soon Option 1</a></li>
+                                            <li><a href="#">Coming Soon Option 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="javascript:void(0);" class="has_children">Timeline</a>
+                                        <ul class="dropdown-menu dropdown-menu-left">
+                                            <li><a href="#">Timeline Left</a></li>
+                                            <li><a href="#">Timeline Center</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Blog</a>
+                                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                                    <li><a href="#">Blog Right Sidebar</a></li>
+                                    <li><a href="#">Blog Left Sidebar</a></li>
+                                    <li><a href="#">Blog Full</a></li>
+                                    <li><a href="#">Blog Masonry <span class="label label-success pull-right">New</span></a></li>
+                                    <li><a href="#">Other Option</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Blog Item</a></li>
+                                    <li><a href="#">Blog Item Full</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">E-commerce</a>
+                                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                                    <li><a href="#">E-commerce Home</a></li>
+                                    <li><a href="#">E-commerce Filters</a></li>
+                                    <li><a href="#">Product</a></li>
+                                    <li><a href="#">Cart</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Portfolio</a>
+                                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                                    <li><a href="#">Portfolio sidebar filters</a></li>
+                                    <li><a href="#">Portfolio topbar filters</a></li>
+                                    <li><a href="#">Portfolio with captions</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Portfolio item</a></li>
+                                    <li><a href="#">Portfolio item device</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- navbar-collapse -->
+                </div><!-- container -->
+            </nav>
+
+            <section class="carousel-section">
+                <div id="carousel-example-generic" class="carousel carousel-razon slide" data-ride="carousel" data-interval="5000">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-7">
+                                        <div class="carousel-caption">
+                                            <div class="carousel-text">
+                                                <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Uma empresa, infinitas possibilidades</h1>
+                                                <h2 class="animated fadeInDownBig animation-delay-5  crousel-subtitle">Entregamos todo pronto, menos o café</h2>
+                                                <ul class="list-unstyled carousel-list">
+                                                    <li class="animated bounceInLeft animation-delay-11"><i class="fa fa-check"></i>Instalação de redes</li>
+                                                    <li class="animated bounceInLeft animation-delay-13"><i class="fa fa-check"></i>Servidores, hosting e dominios</li>
+                                                    <li class="animated bounceInLeft animation-delay-15"><i class="fa fa-check"></i>Virtualização</li>
+                                                </ul>
+                                                <p class="animated fadeInUpBig animation-delay-17">Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum maxime quis tenetur dolor <span>recusandae a nulla</span> qui enim dolorem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-5 hidden-xs carousel-img-wrap">
+                                        <div class="carousel-img">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/pre.png' %}
+                                                <img src="{{ asset_url }}" class="img-responsive animated bounceInUp animation-delay-3" alt="Image">
+                                            {% endimage %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-8">
+                                        <div class="carousel-caption">
+                                            <div class="carousel-text">
+                                                <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Servidores</h1>
+                                                <h2 class="animated fadeInDownBig animation-delay-5  crousel-subtitle">Instalamos e configuramos</h2>
+                                                <ul class="list-unstyled carousel-list">
+                                                    <li class="animated bounceInLeft animation-delay-11"><i class="fa fa-check"></i>Servidores Linux</li>
+                                                    <li class="animated bounceInLeft animation-delay-13"><i class="fa fa-check"></i>Servidores Windows</li>
+                                                    <li class="animated bounceInLeft animation-delay-15"><i class="fa fa-check"></i>Serviços de Hosting</li>
+                                                </ul>
+                                                <p class="animated fadeInUpBig animation-delay-17">Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum maxime quis tenetur dolor <span>recusandae a nulla</span> qui enim dolorem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 hidden-xs carousel-img-wrap">
+                                        <div class="carousel-img">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/pre2.png' %}
+                                                <img src="{{ asset_url }}" class="img-responsive animated bounceInUp animation-delay-3" alt="Image">
+                                            {% endimage %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-7 col-sm-9">
+                                        <div class="carousel-caption">
+                                            <div class="carousel-text">
+                                                <h1 class="animated fadeInDownBig animation-delay-7 carousel-title">Virtualização</h1>
+                                                <h2 class="animated fadeInDownBig animation-delay-5  crousel-subtitle">O que há de mais moderno e competitivo</h2>
+                                                <ul class="list-unstyled carousel-list">
+                                                    <li class="animated bounceInLeft animation-delay-11"><i class="fa fa-check"></i>Maior flexibilidade</li>
+                                                    <li class="animated bounceInLeft animation-delay-13"><i class="fa fa-check"></i>Menor custo</li>
+                                                    <li class="animated bounceInLeft animation-delay-15"><i class="fa fa-check"></i>Maior desempenho</li>
+                                                </ul>
+                                                <p class="animated fadeInUpBig animation-delay-17">Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum maxime quis tenetur dolor <span>recusandae a nulla</span> qui enim dolorem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-5 col-sm-3 hidden-xs carousel-img-wrap">
+                                        <div class="carousel-img">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/pre3.png' %}
+                                                <img src="{{ asset_url }}" class="img-responsive animated bounceInUp animation-delay-3" alt="Image">
+                                            {% endimage %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </section> <!-- carousel -->
+
+            <section class="margin-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="content-box box-default animated fadeInUp animation-delay-10">
+                                <span class="icon-ar icon-ar-lg icon-ar-round icon-ar-inverse"><i class="fa fa-html5"></i></span>
+                                <h4 class="content-box-title">Redes</h4>
+                                <p>Problemas com a instalação ou manutenção das redes da sua empresa?</p>
+                                <a href="#" type="button" class="btn btn-primary btn-ar">Resolva agora</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="content-box box-default animated fadeInUp animation-delay-14">
+                                <span class="icon-ar icon-ar-lg icon-ar-round icon-ar-inverse"><i class="fa fa-css3"></i></span>
+                                <h4 class="content-box-title">Virtualização</h4>
+                                <p>Precissa modernizar os sistemas da sua empresa para se-adaptar as necessidades atuais?</p>
+                                <a href="#" type="button" class="btn btn-primary btn-ar">Conheça a Virtualização</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="content-box box-default animated fadeInUp animation-delay-16">
+                                <span class="icon-ar icon-ar-lg icon-ar-round icon-ar-inverse"><i class="fa fa-desktop"></i></span>
+                                <h4 class="content-box-title">Segurança</h4>
+                                <p>Você confia na protenção dos dados da sua empresa? Problemas con a segurança?</p>
+                                <a href="#" type="button" class="btn btn-primary btn-ar">Fique mais traquilo</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="content-box box-default animated fadeInUp animation-delay-12">
+                                <span class="icon-ar icon-ar-lg icon-ar-round icon-ar-inverse"><i class="fa fa-flag"></i></span>
+                                <h4 class="content-box-title">Servidores</h4>
+                                <p>Seu servidor atende completamente às suas necessidades da sua empresa?</p>
+                                <a href="#" type="button" class="btn btn-primary btn-ar">Veja como solucinar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-lines">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="home-devices">
+                                <h3>The template for all devices</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, sapiente, nam sunt rem beatae architecto cupiditate numquam consectetur dolorum aliquam suscipit adipisci expedita vel quaerat illum aperiam facere inventore officia.</p>
+                                <p>Consequuntur sed ipsum eius minima eum velit soluta accusamus omnis maiores modi quae mollitia consectetur adipisci.</p>
+                                <ul class="icon-devices">
+                                    <li class="active"><a href="#desktop" data-toggle="tab"><i class="fa fa-sitemap"></i></a></li>
+                                    <li><a href="#laptop" data-toggle="tab"><i class="fa fa-print"></i></a></li>
+                                    <li><a href="#tablet" data-toggle="tab"><i class="fa fa-shield"></i></a></li>
+                                    <li><a href="#mobile" data-toggle="tab"><i class="fa fa-tachometer"></i></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="desktop">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/mac.png' %}
+                                        <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="tab-pane" id="laptop">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/macpro.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="tab-pane" id="tablet">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/ipad.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="tab-pane" id="mobile">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/iphone.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <section class="margin-bottom">
+                    <h2 class="section-title">Últimos serviços prestados</h2>
+                    <div class="bxslider-controls">
+                        <span id="bx-prev4"></span>
+                        <span id="bx-next4"></span>
+                    </div>
+                    <ul class="bxslider" id="latest-works">
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w1.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Hospedagem de site</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w2.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Manutenção de redes</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w3.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Instalação de servidor</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w4.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Venda e instalação de computadores</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w1.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Hospedagem de site</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w2.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Manutenção de redes</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w3.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Instalação de servidor</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-caption-ar">
+                                {% image '@AppBundle/Resources/public/assets/img/demo/w4.jpg' %}
+                                <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                {% endimage %}
+                                <div class="caption-ar">
+                                    <div class="caption-content">
+                                        <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>Mais informação</a>
+                                        <h4 class="caption-title">Venda e instalação de computadores</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p class="slogan text-center">Descubra o porque de nossos <span>15 anos</span> de serciço, <span>responsabilidade, compromisso e seriedade</span>. Nossos principios <span>satisfazem</span> aos nossos clientes e os tornam <span>amigos</span>.</p>
+                    <h2 class="section-title">Nossos Clientes</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bxslider-controls">
+                                <span id="bx-prev5"></span>
+                                <span id="bx-next5"></span>
+                            </div>
+                            <ul class="bxslider" id="home-block">
+                                <li>
+                                    <blockquote class="blockquote-color">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                                        <footer>Mirian Dayrell, CEO da Mirian Dayrell Imóveis</footer>
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <blockquote class="blockquote-color">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                                        <footer>Roberto Marinho, Jornal o Globo</footer>
+                                    </blockquote>
+                                </li>
+                                <li>
+                                    <blockquote class="blockquote-color">
+                                        <p>Dolore totam at ea reiciendis suscipit a tempore cum nisi aspernatur nisi alias posuere erat a ante posuere erat a ante ultricies ultricies nisi vel augue quam semper conse erat quuntur.</p>
+                                        <footer>Silvio Santos, Dono da SBT</footer>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/intel.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/microsoft.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/nokia.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/samsung.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/anz.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/maxis.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/sony.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    {% image '@AppBundle/Resources/public/assets/img/demo/hp.png' %}
+                                    <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                    {% endimage %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <aside id="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="footer-widget-title">Mapa do Site</h3>
+                            <ul class="list-unstyled three_cols">
+                                <li><a href="{{ path('homepage') }}">Início</a></li>
+                                <li><a href="#{#home_services.html#}">Serviços</a></li>
+                                <li><a href="#{#e-commerce_home.html#}">Produtos</a></li>
+                                <li><a href="#{#page_team.html#}">Nossos clientes</a></li>
+                                <li><a href="#{#page_support.html#}">FAQ</a></li>
+                                <li><a href="#{#page_contact.html#}">Contato</a></li>
+                            </ul>
+                            <h3 class="footer-widget-title">Suscriba nosso Newsletter</h3>
+                            <p>Lorem ipsum Amet fugiat elit nisi anim mollit minim labore ut esse Duis ullamco ad dolor veniam velit.</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Seu Email">
+                    <span class="input-group-btn">
+                        <button class="btn btn-ar btn-primary" type="button">Suscribir</button>
+                    </span>
+                            </div><!-- /input-group -->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-widget">
+                                <h3 class="footer-widget-title">Post Recentes</h3>
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        {% image '@AppBundle/Resources/public/assets/img/demo/m2.jpg' %}
+                                        <img src="{{ asset_url }}" class="media-object" alt="Image" width="75" height="75">
+                                        {% endimage %}
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Lorem ipsum Duis quis occaecat minim lorem ipsum tempor officia labor</a></h4>
+                                        <small>22 de dezembro de 2015</small>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        {% image '@AppBundle/Resources/public/assets/img/demo/m11.jpg' %}
+                                        <img src="{{ asset_url }}" class="media-object" alt="Image" width="75" height="75">
+                                        {% endimage %}
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Lorem ipsum dolor excepteur sunt in lorem ipsum cillum tempor</a></h4>
+                                        <small>28 de dezembro de 2015</small>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        {% image '@AppBundle/Resources/public/assets/img/demo/m4.jpg' %}
+                                        <img src="{{ asset_url }}" class="media-object" alt="Image" width="75" height="75">
+                                        {% endimage %}
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#">Lorem ipsum Dolor cupidatat minim adipisicing et fugiat</a></h4>
+                                        <small>3 de janeiro de 2016</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-widget">
+                                <h3 class="footer-widget-title">Últimos serviços prestados</h3>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/wf1.jpg' %}
+                                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                            {% endimage %}
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/wf2.jpg' %}
+                                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                            {% endimage %}
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/wf3.jpg' %}
+                                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                            {% endimage %}
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                        <a href="#" class="thumbnail">
+                                            {% image '@AppBundle/Resources/public/assets/img/demo/wf4.jpg' %}
+                                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                                            {% endimage %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </aside> <!-- footer-widgets -->
+            <footer id="footer">
+                <p>&copy; 2016 <a href="http://clinicadomicro.com.br">Clínica do Micro</a>. Todos os Direitos Reservados.</p>
+            </footer>
+
+        </div> <!-- boxed -->
+    </div> <!-- sb-site -->
+
+    <div class="sb-slidebar sb-right">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+        </span>
+        </div><!-- /input-group -->
+
+        <h2 class="slidebar-header no-margin-bottom">Menu</h2>
+        <ul class="slidebar-menu">
+            <li><a href="{{ path("homepage") }}">Início</a></li>
+            <li><a href="#{#portfolio_topbar.html#}">Serviços</a></li>
+            <li><a href="#{#page_about3.html#}">Produtos</a></li>
+            <li><a href="#{#blog.htm#}l">Nossos Clientes</a></li>
+            <li><a href="#{#page_contact.html#}">Contato</a></li>
+        </ul>
+
+        <h2 class="slidebar-header">Redes Sociais</h2>
+        <div class="slidebar-social-icons">
+            <a href="#" class="social-icon-ar rss"><i class="fa fa-rss"></i></a>
+            <a href="#" class="social-icon-ar facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon-ar twitter"><i class="fa fa-twitter"></i></a>
+            <!--<a href="#" class="social-icon-ar pinterest"><i class="fa fa-pinterest"></i></a>-->
+            <!--<a href="#" class="social-icon-ar instagram"><i class="fa fa-instagram"></i></a>-->
+            <!--<a href="#" class="social-icon-ar wordpress"><i class="fa fa-wordpress"></i></a>-->
+            <!--<a href="#" class="social-icon-ar linkedin"><i class="fa fa-linkedin"></i></a>-->
+            <!--<a href="#" class="social-icon-ar flickr"><i class="fa fa-flickr"></i></a>-->
+            <!--<a href="#" class="social-icon-ar vine"><i class="fa fa-vine"></i></a>-->
+            <!--<a href="#" class="social-icon-ar dribbble"><i class="fa fa-dribbble"></i></a>-->
+        </div>
+    </div> <!-- sb-slidebar sb-right -->
+    <div id="back-top">
+        <a href="#header"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends('::layout.html.twig') %}
+
+{% block body %}
+    <header class="main-header">
+        <div class="container">
+            <h1 class="page-title">Producto</h1>
+
+            <ol class="breadcrumb pull-right">
+                <li><a href="#">Produtos</a></li>
+                <li class="active">{{ produto.name }}</li>
+            </ol>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title no-margin-top">{{ produto.name }}</h2>
+        <div class="row">
+            <div class="col-md-4">
+
+                <ul class="bxslider">
+                    <li><img src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/1.jpg' ) }}" /></li>
+                    <li><img src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/2.jpg' ) }}" /></li>
+                    <li><img src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/3.jpg' ) }}" /></li>
+                    <li><img src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/4.jpg' ) }}" /></li>
+                    <li><img src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/5.jpg' ) }}" /></li>
+                </ul>
+
+                <div id="bx-pager">
+                    <a data-slide-index="0" href=""><img class="thumb-50" src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/1.jpg' ) }}" /></a>
+                    <a data-slide-index="1" href=""><img class="thumb-50" src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/2.jpg' ) }}" /></a>
+                    <a data-slide-index="2" href=""><img class="thumb-50" src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/3.jpg' ) }}" /></a>
+                    <a data-slide-index="3" href=""><img class="thumb-50" src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/4.jpg' ) }}" /></a>
+                    <a data-slide-index="4" href=""><img class="thumb-50" src="{{ asset('bundles/app/assets/img/produto/' ~ produto.slug ~ '/5.jpg' ) }}" /></a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h3 class="no-margin-top">Descrição</h3>
+                <p>{{ produto.descricao | truncate(500) }}</p>
+                <p></p>
+                <h4>Especificações</h4>
+                <ul class="unstyled">
+                    <li><strong>Memory: </strong> 8GB standard, 16GB version available / RAM- 1GB LPDDR2</li>
+                    <li><strong>PROCESSOR: </strong>Qualcomm MSM8x26 quad-core A7 1.2GHz (Adreno 305 450MHz GPU)</li>
+                    <li><strong>Bands/Modes: </strong>CDMA: 850/1900 UMTS: 850/900/1700/1900/2100 GSM: 850/900/1800/1900</li>
+                    <li><strong>Operating system: </strong>Android 4.4, KitKat</li>
+                </ul>
+
+            </div>
+            <div class="col-md-3">
+                <div class="e-price">R$ <span>{{ produto.preco|number_format(0,',','.') }}</span>,00</div>
+                {#<a href="#" class="btn btn-ar btn-block btn-success"><i class="fa fa-shopping-cart"></i> Add to Cart</a>#}
+                <h3 class="right-line">Produtos relacionados</h3>
+                <div class="ec-box">
+                    <div class="ec-box-header"><a href="#">Bq Aquaris 5 16GB White</a></div>
+                    <a href="{{ path('produto', { 'produto': produto.slug }) }}"><img src="{{ asset('bundles/app/assets/img/demo/e_img03.jpg') }}" alt=""></a>
+                    <div class="ec-box-footer">
+                        <span class="label label-primary">$ 249.99</span>
+                        <a href="#" class="btn btn-ar btn-success btn-sm pull-right"><i class="fa fa-info-circle"></i> Mais info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- container -->
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/assets/js/e-commerce_product.js') }}"></script>
+{% endblock %}

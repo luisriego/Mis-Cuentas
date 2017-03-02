@@ -1,0 +1,108 @@
+{% extends('::layout.html.twig') %}
+
+{% block body %}
+    <header class="main-header">
+        <div class="container">
+            <h1 class="page-title">Produtos</h1>
+
+            <ol class="breadcrumb pull-right">
+                <li><a href="#">Produtos</a></li>
+            </ol>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="ec-filters-menu">
+                    <h3 class="section-title no-margin-top">Categorias</h3>
+                    <h4>Seleciona uma categoria</h4>
+                    <ul>
+                        <li><a href="javascript:void(0);" class="filter" data-filter="all">Todos</a></li>
+                        {% for cat in categorias %}
+                        <li><a href="javascript:void(0);" class="filter" data-filter=".category-{{ cat.slug }}">{{ cat.nome }}</a></li>
+                        {% endfor %}
+                        {#<li><a href="javascript:void(0);" class="filter" data-filter=".category-tv">Smart TV</a></li>#}
+                        {#<li><a href="javascript:void(0);" class="filter" data-filter=".category-keyboard">Keyboards</a></li>#}
+                        {#<li><a href="javascript:void(0);" class="filter" data-filter=".category-graphic">Graphics Cards</a></li>#}
+                    </ul>
+                    <h4>Ordenar por</h4>
+                    <ul>
+                        <li><a href="javascript:void(0);" class="sort" data-sort="price:asc">Preço: menor a maior</a></li>
+                        <li><a href="javascript:void(0);" class="sort" data-sort="price:desc">Preço: Maior a menor</a></li>
+                        <li><a href="javascript:void(0);" class="sort" data-sort="popularity:desc">Mais procurados</a></li>
+                        <li><a href="javascript:void(0);" class="sort" data-sort="date:desc">Lançamentos</a></li>
+                    </ul>
+                </div>
+                <h3 class="section-title">Últimas ofertas</h3>
+                <div class="bxslider-controls">
+                    <span id="bx-prev5"></span>
+                    <span id="bx-next5"></span>
+                </div>
+                <ul class="bxslider" id="offers">
+                    <li>
+                        <div class="ec-box">
+                            <div class="ec-box-header"><a href="#">Bq Aquaris 5 16GB White</a></div>
+                            <a href="#"><img src="assets/img/demo/e_img03.jpg" alt=""></a>
+                            <div class="ec-box-footer">
+                                <span class="label label-primary">R$ 249.99</span>
+                                <a href="#" class="btn btn-ar btn-success btn-sm pull-right"><i class="fa fa-shopping-cart"></i> Mais info</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ec-box">
+                            <div class="ec-box-header"><a href="#">LG 55LA620S 55" LED 3D</a></div>
+                            <a href="#"><img src="assets/img/demo/e_img07.jpg" alt=""></a>
+                            <div class="ec-box-footer">
+                                <span class="label label-primary">R$ 999.99</span>
+                                <a href="#" class="btn btn-ar btn-success btn-sm pull-right"><i class="fa fa-shopping-cart"></i> Mais info</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ec-box">
+                            <div class="ec-box-header"><a href="#">Iphone 5S</a></div>
+                            <a href="#"><img src="assets/img/demo/e_img01.jpg" alt=""></a>
+                            <div class="ec-box-footer">
+                                <span class="label label-primary">R$ 649.00</span>
+                                <a href="#" class="btn btn-ar btn-success btn-sm pull-right"><i class="fa fa-shopping-cart"></i> Mais info</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="row" id="Container">
+                    {% for prod in produtos %}
+                    <div class="col-sm-4 mix category-{{ prod.categoria.slug }}" data-price="{{ prod.preco }}" data-date="20130521" data-popularity="3">
+                        <div class="ec-box">
+                            <div class="ec-box-header">
+                                <a href="{{ path('produto', { 'produto': prod.slug }) }}">{{ prod.name | truncate(30) }}</a>
+                            </div>
+                            <a href="{{ path('produto', { 'produto': prod.slug }) }}">
+                                {#{% image '@AppBundle/Resources/public/assets/img/produto/'~prod.avatar %}#}
+                                {#<img src="{{ asset_url }}" class="img-responsive animated bounceInUp animation-delay-3" alt="Image">#}
+                                {#{% endimage %}#}
+                                <img src="{{ asset('bundles/app/assets/img/produto/'~prod.avatar) }}" alt="{{ prod.name }}">
+                            </a>
+                            <div class="ec-box-footer">
+                                <span class="label label-primary">R$ {{ prod.preco | number_format(2, ',', '.') }}</span>
+                                <a href="{{ path('produto', { 'produto': prod.slug }) }}" class="btn btn-ar btn-success btn-sm pull-right">
+                                    <i class="fa fa-info"></i> Mais info
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div> <!-- container -->
+
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/assets/js/commerce.js') }}"></script>
+{% endblock %}

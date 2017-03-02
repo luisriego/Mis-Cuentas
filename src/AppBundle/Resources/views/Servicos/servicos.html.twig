@@ -1,0 +1,335 @@
+{% extends('::layout.html.twig') %}
+
+{% block body %}
+    <header class="services-header">
+        <div class="primary-dark-div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service-header-text text-center center-block">
+                            <h1 class="animated fadeInDown animation-delay-2">Na Vanguarda da Inovação</h1>
+                            <p class="animated fadeInDown animation-delay-5">Phasellus viverra nulla ut metus varius laoreet rutrum. Aenean imperdiet etiam ultricies nisi vel augue.</p>
+                            <p class="animated fadeInDown animation-delay-8"><a href="#" class="btn btn-ar btn-primary btn-lg">Saiba mais</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="services-header-list">
+                            <li class="animated fadeInUp animation-delay-5"><a href="#"><i class="fa fa-globe"></i> Soluciones Globais em redes</a></li>
+                            <li class="animated fadeInUp animation-delay-8"><a href="#"><i class="fa fa-tachometer"></i> Servidores de Última Geração</a></li>
+                            <li class="animated fadeInUp animation-delay-11"><a href="#"><i class="fa fa-cloud"></i> Virtualização, Seguranca e mais</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="margin-bottom">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="right-line">Que fazemos?</h2>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-icon wow fadeInUp">
+                        <span class="icon-ar icon-ar-lg"><i class="fa fa-sitemap"></i></span>
+                        <div class="text-icon-content">
+                            <h3 class="no-margin">Intalamos e mantemos redes</h3>
+                            <p>São 15 anos de experiência e "savoir-faire". Peça uma visita para avaliarmos e fazermos uma proposta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-icon wow fadeInUp">
+                        <span class="icon-ar icon-ar-lg"><i class="fa fa-shield"></i></span>
+                        <div class="text-icon-content">
+                            <h3 class="no-margin">Serviços de Segurança</h3>
+                            <p>Não fique na mão de hawkers inescripulosos, Proteja-se.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-icon wow fadeInUp">
+                        <span class="icon-ar icon-ar-lg"><i class="fa fa-desktop"></i></span>
+                        <div class="text-icon-content">
+                            <h3 class="no-margin">Venda, instalação de equipos</h3>
+                            <p>Nos fornecemos, instalamos e damos manutenção nos equipamentos que a sua empresa precissa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-icon wow fadeInUp">
+                        <span class="icon-ar icon-ar-lg"><i class="fa fa-wordpress"></i></span>
+                        <div class="text-icon-content">
+                            <h3 class="no-margin">Criamos o seu site</h3>
+                            <p>Criamos o site que a sua empresa precissa para entrar na era digital.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-icon wow fadeInUp">
+                        <span class="icon-ar icon-ar-lg"><i class="fa fa-graduation-cap"></i></span>
+                        <div class="text-icon-content">
+                            <h3 class="no-margin">Treinamento</h3>
+                            <p>Oferecemos um serviço para atualizar o pessoal da sua empresa no melhor uso das redes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="text-icon wow fadeInUp">
+                        <span class="icon-ar icon-ar-lg"><i class="fa fa-paper-plane-o"></i></span>
+                        <div class="text-icon-content">
+                            <h3 class="no-margin">Serviços a Medida</h3>
+                            <p>Todos os nossos serviços são adaptados as suas necesidades e possibilidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </section>
+    </div> <!-- container -->
+
+    <section class="section-lines">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 padding-40">
+                    <p class="slogan text-center no-margin">Descubra o porque de nossos <span>15 anos</span> de serciço, <span>responsabilidade, compromisso e seriedade</span>. Nossos principios <span>satisfazem</span> aos nossos clientes e os tornam <span>amigos</span>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="margin-bottom">
+            <h2 class="section-title">Últimos Serviços</h2>
+            <div class="bxslider-controls">
+                <span id="bx-prev4"></span>
+                <span id="bx-next4"></span>
+            </div>
+            <ul class="bxslider" id="latest-works">
+                <li>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w1.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w2.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w3.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w4.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w5.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w6.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w7.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-caption-ar">
+                        <img src="{{ asset('bundles/app/assets/img/demo/w8.jpg') }}" class="img-responsive" alt="Image">
+                        <div class="caption-ar">
+                            <div class="caption-content">
+                                <a href="#" class="animated fadeInDown"><i class="fa fa-search"></i>More info</a>
+                                <h4 class="caption-title">Title Caption</h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="margin-bottom">
+            <p class="lead lead-lg text-center primary-color margin-bottom">Conheça <strong>Clinica do Micro</strong> e surprenda-se!</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="no-margin-top">A Gente</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, alias, nihil molestias libero corporis perferendis a quasi at.</p>
+                    <p>Eos, illum, odit nulla provident sint atque quasi necessitatibus dolores voluptatibus perspiciatis aliquid tempora possimus laudantium. Blanditiis, deleniti!</p>
+                    <p>Saepe, laborum, eligendi vitae ad excepturi officiis vel omnis quidem et dolorum rem vero explicabo consequatur mollitia nihil!</p>
+                    <p>Fuga, omnis, quo, cumque, ipsa quasi facilis voluptatibus iure veniam nostrum voluptate accusantium dolore reprehenderit. Corrupti, mollitia, maiores!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit ducimus, pariatur ad ipsam et quod numquam eveniet magni aspernatur.</p>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-link">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    <i class="fa fa-lightbulb-o"></i> Talento e Criatividade
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt perferendis.</p>
+                                    <p>Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis eum suscipit magnam dolorum in adipisci nihil ipsam perspiciatis molestiae!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-link">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                                    <i class="fa fa-desktop"></i> Sabemos o que estamos fazendo
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit dignissimos inventore cupiditate expedita saepe enim nobis nostrum? Laborum, laudantium, maiores, cupiditate, perspiciatis at ad accusamus corporis sed ipsam et velit!</p>
+                                    <p>Incidunt, harum itaque voluptatum asperiores recusandae explicabo maiores. Alias, quos, ex impedit at error id laborum fugit architecto qui beatae molestiae dolorum rem veritatis quia aliquam totam accusamus perferendis. Nulla!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-link">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                    <i class="fa fa-user"></i> Qualidade e Responsabilidade
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, rerum unde doloribus accusamus pariatur non expedita quibusdam velit totam obcaecati. Consequatur, deserunt, asperiores quam nisi earum voluptates animi labore tempore!</p>
+                                    <p>Dolorum, aliquam, totam labore saepe error a eum culpa assumenda sint laudantium ipsa iure ullam et dicta nesciunt repellendus optio voluptatibus reprehenderit odit officia fugiat necessitatibus recusandae architecto ad neque?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Nossos Clientes</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="bxslider-controls">
+                        <span id="bx-prev5"></span>
+                        <span id="bx-next5"></span>
+                    </div>
+                    <ul class="bxslider" id="home-block">
+                        <li>
+                            <blockquote class="blockquote-color">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                                <footer>Mirian Dayrell, CEO da Mirian Dayrell Imóveis</footer>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <blockquote class="blockquote-color">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante ultricies nisi vel augue quam semper libero.</p>
+                                <footer>Roberto Marinho, Jornal o Globo</footer>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <blockquote class="blockquote-color">
+                                <p>Dolore totam at ea reiciendis suscipit a tempore cum nisi aspernatur nisi alias posuere erat a ante posuere erat a ante ultricies ultricies nisi vel augue quam semper conse erat quuntur.</p>
+                                <footer>Silvio Santos, Dono da SBT</footer>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/intel.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/microsoft.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/nokia.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/samsung.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/anz.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/maxis.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/sony.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            {% image '@AppBundle/Resources/public/assets/img/demo/hp.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="Image">
+                            {% endimage %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- container -->
+
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/assets/js/home_services.js') }}"></script>
+{% endblock %}

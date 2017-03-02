@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>{% block title %}Luis Riego{% endblock %}</title>
+
+    <link rel="shortcut icon" href="{{ asset('bundles/app/assets/img/favicon.png') }}" />
+
+    <meta name="description" content="">
+
+    {% block stylesheets %}
+    <!-- CSS -->
+    <link href="{{ asset('bundles/app/assets/css/preload.css') }}" rel="stylesheet">
+
+    <!-- Compiled in vendors.js -->
+
+    {#<link href="{{ asset('bundles/app/assets/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">#}
+    {#<link href="{{ asset('bundles/app/assets/lib/bootstrap/css/bootstrap-s') }}assets/css/bootstrap-switch.min.css" rel="stylesheet">#}
+    {#<link href="assets/css/font-awesome.min.css" rel="stylesheet">#}
+    {#<link href="assets/css/animate.min.css" rel="stylesheet">#}
+    {#<link href="assets/css/slidebars.min.css" rel="stylesheet">#}
+    {#<link href="assets/css/lightbox.css" rel="stylesheet">#}
+    {#<link href="assets/css/jquery.bxslider.css" rel="stylesheet" />#}
+    {#<link href="assets/css/buttons.css" rel="stylesheet">#}
+
+
+    <link href="{{ asset('bundles/app/assets/css/vendors.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/app/assets/css/extra.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/app/assets/css/syntaxhighlighter/shCore.css') }}" rel="stylesheet" >
+
+    <link href="{{ asset('bundles/app/assets/css/style-blue.css') }}" rel="stylesheet" title="default">
+    <link href="{{ asset('bundles/app/assets/css/width-full.css') }}" rel="stylesheet" title="default">
+
+    {% endblock %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('bundles/app/assets/js/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/respond.min.js') }}"></script>
+    <![endif]-->
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<body>
+<div id="sb-site">
+    <div class="boxed">
+{% block menus %}{% endblock %}
+{% block body %}{% endblock %}
+{% block aside %} {% endblock %}
+    <footer id="footer">
+        <p>&copy; 2011 - 2016 <a href="http://www.luisriego.com">Luís Riego</a>. Todos os Direitos Reservados.</p>
+    </footer>
+    </div> <!-- boxed -->
+</div> <!-- sb-site -->
+{% block slidebar %}{% endblock %}
+{% block javascript %}
+<!-- Scripts -->
+<!-- Compiled in vendors.js -->
+
+{#<script src="assets/js/jquery.min.js"></script>#}
+{#<script src="assets/js/jquery.cookie.js"></script>#}
+{#<script src="assets/js/imagesloaded.pkgd.min.js"></script>#}
+{#<script src="assets/js/bootstrap.min.js"></script>#}
+{#<script src="assets/js/bootstrap-switch.min.js"></script>#}
+{#<script src="assets/js/wow.min.js"></script>#}
+{#<script src="assets/js/slidebars.min.js"></script>#}
+{#<script src="assets/js/jquery.bxslider.min.js"></script>#}
+{#<script src="assets/js/holder.js"></script>#}
+{#<script src="assets/js/buttons.js"></script>#}
+{#<script src="assets/js/jquery.mixitup.min.js"></script>#}
+{#<script src="assets/js/circles.min.js"></script>#}
+{#<script src="assets/js/masonry.pkgd.min.js"></script>#}
+{#<script src="assets/js/jquery.matchHeight-min.js"></script>#}
+
+
+    <script src="{{ asset('bundles/app/assets/js/vendors.js') }}"></script>
+
+    <!-- Syntaxhighlighter -->
+    <script src="{{ asset('bundles/app/assets/js/syntaxhighlighter/shCore.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/syntaxhighlighter/shBrushXml.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/syntaxhighlighter/shBrushJScript.js') }}"></script>
+
+    <script src="{{ asset('bundles/app/assets/js/DropdownHover.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/app.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/holder.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/page_charts.js') }}"></script>
+{#<script src="{{ asset('bundles/app/assets/js/index.js') }}"></script>#}
+
+
+{% endblock %}
+
+</body>
+
+</html>

@@ -76,6 +76,9 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: AppBundle\Entity\User
+    from_email:
+            address: luisriego@hotmail.com
+            sender_name: Luis Riego
 
 # Javier Eguiluz EasyAdminBundle
 #easy_admin:
@@ -115,3 +118,10 @@ easy_admin:
                 fields: ['id', 'nombre', 'mensaje', 'fecha', 'email', 'ip']
                 title: 'Últimos contatos'
     site_name: 'Luis Riego'
+
+#DOCTRINE MIGRATIONS BUNDLE configuration
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations

@@ -2,11 +2,11 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: imove791_sflr
-    database_user: imove791_alexis
-    database_password: sCM^7yCNr#tG
+    database_name: cuentas
+    database_user: root
+    database_password: Santiago@2007
     mailer_transport: smtp
     mailer_host: 127.0.0.1
-    mailer_user: 
-    mailer_password: 
-    secret: ThisTokenIsNotSoSecretChangeIt
+    mailer_user: null
+    mailer_password: null
+    secret: kdfçksal45ç6jjgãp94~glgj
